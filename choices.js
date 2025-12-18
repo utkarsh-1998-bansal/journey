@@ -1,0 +1,358 @@
+// ==========================================
+// UTKARSH'S WARM ROOM
+// Dynamic Trait Engine - Choice Data
+// ==========================================
+
+const choiceData = {
+    zone1: {
+        title: "The Lab Bench (Roots)",
+        moments: [
+            {
+                id: "z1m1",
+                story: "Before product roadmaps, there were Petri dishes. My background is in Life Sciences (BSc, Delhi University). In the lab, you don't guess—you observe. This was my first lesson in systems thinking.",
+                prompt: "What stood out to you in the lab?",
+                options: {
+                    a: {
+                        text: "The invisible patterns",
+                        story: "Microscopes reveal what eyes miss.",
+                        player: "You look for the hidden logic underneath the surface.",
+                        reflection: "I learned that what you can't see often drives the system.",
+                        traits: { orientation: 'systems', ambiguity: 'avoids' }
+                    },
+                    b: {
+                        text: "The strict protocols",
+                        story: "Protocols prevent contamination.",
+                        player: "You value structure and reliable processes.",
+                        reflection: "I respected process, but wondered how to optimize it.",
+                        traits: { decisionStyle: 'deliberate', productLens: 'system' }
+                    },
+                    c: {
+                        text: "The failed experiments",
+                        story: "Failure is just data.",
+                        player: "You see failure as a necessary step in discovery.",
+                        reflection: "Later, I'd call this 'iteration'. Back then, it was just patience.",
+                        traits: { ambiguity: 'explores', decisionStyle: 'iterative' }
+                    }
+                }
+            },
+            {
+                id: "z1m2",
+                story: "Biology is complex. One variable changes, and the whole organism reacts. It's the ultimate 'spaghetti code'.",
+                prompt: "When a system behaved unpredictably, I…",
+                options: {
+                    a: {
+                        text: "Isolated the variable",
+                        story: "Find the single point of failure.",
+                        player: "You zoom in to find the root cause quickly.",
+                        reflection: "This instinct became my debugging mindset.",
+                        traits: { changeInstinct: 'rootCause', orientation: 'systems' }
+                    },
+                    b: {
+                        text: "Redesigned the experiment",
+                        story: "If the setup is flawed, the data is useless.",
+                        player: "You aren't afraid to scrap it and start over.",
+                        reflection: "Sometimes you have to rebuild the foundation.",
+                        traits: { changeInstinct: 'redesign', decisionStyle: 'decisive' }
+                    }
+                }
+            },
+            {
+                id: "z1m3",
+                story: "Leaving the lab was a choice. I traded the microscope for the market, taking a role at Weikfield Foods as a Market Research Intern.",
+                prompt: "What was the appeal?",
+                options: {
+                    a: {
+                        text: "Real human impact",
+                        story: "Cells don't talk back. Consumers do.",
+                        player: "You wanted to solve problems for people, not slides.",
+                        reflection: "Feedback loops became my new obsession.",
+                        traits: { orientation: 'people', productLens: 'ux' }
+                    },
+                    b: {
+                        text: "The scale of data",
+                        story: "392 respondents. That's a lot of signals.",
+                        player: "You wanted to find truth in the numbers.",
+                        reflection: "Data became the bridge between science and business.",
+                        traits: { productLens: 'business', orientation: 'outcome' }
+                    }
+                }
+            }
+        ]
+    },
+
+    zone2: {
+        title: "The Sales Floor (The Hustle)",
+        moments: [
+            {
+                id: "z2m1",
+                story: "ClearTax & Bizom. Enterprise Sales. The metrics changed from 'cell growth' to 'pipeline revenue' (INR 85 Lakhs, to be precise).",
+                prompt: "What did sales teach you about product?",
+                options: {
+                    a: {
+                        text: "Features help, but value sells",
+                        story: "Clients buy outcomes, not buttons.",
+                        player: "You focus on the 'why'—the tangible benefit.",
+                        reflection: "I learned to sell the destination, not the plane.",
+                        traits: { productLens: 'business', orientation: 'outcome' }
+                    },
+                    b: {
+                        text: "Every 'No' is feature request",
+                        story: "Rejection is just unfiltered user feedback.",
+                        player: "You listen to the friction points.",
+                        reflection: "I started seeing gaps in the product through their objections.",
+                        traits: { productLens: 'ux', ambiguity: 'explores' }
+                    }
+                }
+            },
+            {
+                id: "z2m2",
+                story: "Driving product adoption with enterprise clients meant dealing with complex stakeholder webs. Everyone had a veto.",
+                prompt: "How did you navigate the room?",
+                options: {
+                    a: {
+                        text: "Found the champion",
+                        story: "Identify who feels the pain most.",
+                        player: "You look for your internal advocate.",
+                        reflection: "Finding a champion was key to adoption.",
+                        traits: { orientation: 'people', decisionStyle: 'decisive' }
+                    },
+                    b: {
+                        text: "Mapped the incentives",
+                        story: "Why does the CFO care? Why does the user care?",
+                        player: "You analyze the system of motivations.",
+                        reflection: "Incentive mapping became a core stakeholder skill.",
+                        traits: { orientation: 'systems', productLens: 'business' }
+                    }
+                }
+            },
+            {
+                id: "z2m3",
+                story: "I generated INR 35 Lakhs revenue, but something was missing. I wasn't just happy selling the solution; I wanted to build it.",
+                prompt: "The pivot point was…",
+                options: {
+                    a: {
+                        text: "The desire to build",
+                        story: "Sales ends at the contract. Product never ends.",
+                        player: "You wanted to own the solution lifecycle.",
+                        reflection: "I wanted to fix the problems I was apologizing for.",
+                        traits: { changeInstinct: 'redesign', decisionStyle: 'iterative' }
+                    },
+                    b: {
+                        text: "The gap in the market",
+                        story: "You saw needs that no one was addressing.",
+                        player: "You saw an opportunity to innovate.",
+                        reflection: "I realized the roadmap was where the real leverage was.",
+                        traits: { productLens: 'business', ambiguity: 'explores' }
+                    }
+                }
+            }
+        ]
+    },
+
+    zone3: {
+        title: "The MBA Pivot (Transition)",
+        moments: [
+            {
+                id: "z3m1",
+                story: "LBSIM, Delhi. MBA in Marketing & IT. This was the bridge. A deliberate pause to retool. I didn't just study; I led the Website Revamp.",
+                prompt: "Why redesign the LBSIM website?",
+                options: {
+                    a: {
+                        text: "It was broken",
+                        story: "35% user satisfaction improvement needed.",
+                        player: "You saw a leaky bucket and had to fix it.",
+                        reflection: "We improved satisfaction by 35%. Efficiency mattered.",
+                        traits: { changeInstinct: 'symptoms', orientation: 'outcome' }
+                    },
+                    b: {
+                        text: "It was the face of the brand",
+                        story: "First impressions are digital now.",
+                        player: "You understood the user journey started online.",
+                        reflection: "It was my first real lesson in User Experience (UX).",
+                        traits: { productLens: 'ux', orientation: 'people' }
+                    }
+                }
+            },
+            {
+                id: "z3m2",
+                story: "I got Certified via Coursera (Product Management Essentials) and Udemy (AI & Data Science). Theory meets practice.",
+                prompt: "What stuck with you most?",
+                options: {
+                    a: {
+                        text: "Agile rituals",
+                        story: "Structure for chaos.",
+                        player: "You appreciated the rhythm of shipment.",
+                        reflection: "Agile wasn't just rules; it was a heartbeat.",
+                        traits: { productLens: 'system', decisionStyle: 'deliberate' }
+                    },
+                    b: {
+                        text: "Data-driven decisions",
+                        story: "Opinions are cheap. Data is gold.",
+                        player: "You wanted objective truth.",
+                        reflection: "I learned to trust the metrics over the loudest voice.",
+                        traits: { productLens: 'business', decisionStyle: 'decisive' }
+                    }
+                }
+            },
+            {
+                id: "z3m3",
+                story: "Graduation came. I had the Science (BSc), the Hustle (Sales), and the Strategy (MBA). Ready for the real arena.",
+                prompt: "What was the goal?",
+                options: {
+                    a: {
+                        text: "Solving complex problems",
+                        story: "The harder the knot, the better.",
+                        player: "You sought intellectual challenge.",
+                        reflection: "I wanted problems that required all three lenses.",
+                        traits: { ambiguity: 'explores', changeInstinct: 'rootCause' }
+                    },
+                    b: {
+                        text: "Building scalable tech",
+                        story: "One solution, million users.",
+                        player: "You wanted leverage.",
+                        reflection: "I wanted to build things that grew.",
+                        traits: { orientation: 'systems', productLens: 'business' }
+                    }
+                }
+            }
+        ]
+    },
+
+    zone4: {
+        title: "The Workshop (IGT Solutions)",
+        moments: [
+            {
+                id: "z4m1",
+                story: "IGT Solutions. Senior Business Analyst. The ground reality. Leading workshops with 10+ stakeholders to identify pain points.",
+                prompt: "The hardest part of a workshop is…",
+                options: {
+                    a: {
+                        text: "The conflicting requirements",
+                        story: "Everyone wants something different.",
+                        player: "You act as the negotiator/translator.",
+                        reflection: "I learned to find the 'common denominator' of value.",
+                        traits: { orientation: 'people', ambiguity: 'manages' }
+                    },
+                    b: {
+                        text: "The unstated needs",
+                        story: "Users don't always know what they need.",
+                        player: "You dig for the root problem.",
+                        reflection: "I learned to listen for what they weren't saying.",
+                        traits: { ambiguity: 'explores', productLens: 'ux' }
+                    }
+                }
+            },
+            {
+                id: "z4m2",
+                story: "One key win: The Crew Travel Booking System. We streamlined operations for flight-hotel-cab bookings.",
+                prompt: "Where did you start?",
+                options: {
+                    a: {
+                        text: "The user journey",
+                        story: "Crew are tired; they need speed.",
+                        player: "You prioritized the user's context.",
+                        reflection: "We made it frictionless because their time was scarce.",
+                        traits: { productLens: 'ux', changeInstinct: 'redesign' }
+                    },
+                    b: {
+                        text: "The operational cost",
+                        story: "Manual bookings bleed money.",
+                        player: "You focused on the business efficiency.",
+                        reflection: "The goal was streamlining ops—saving time and money.",
+                        traits: { productLens: 'business', orientation: 'outcome' }
+                    }
+                }
+            },
+            {
+                id: "z4m3",
+                story: "GDS Queue Management Automation. Automating digital workflows to reduce processing time by 40%.",
+                prompt: "Automation is about…",
+                options: {
+                    a: {
+                        text: "Replacing boring work",
+                        story: "Let humans be humans.",
+                        player: "You want to remove drudgery.",
+                        reflection: "We freed people to do high-value work.",
+                        traits: { orientation: 'people', changeInstinct: 'redesign' }
+                    },
+                    b: {
+                        text: "Standardizing quality",
+                        story: "Machines don't make typos.",
+                        player: "You value consistency and speed.",
+                        reflection: "Speed increased, but consistency was the real win.",
+                        traits: { orientation: 'systems', productLens: 'system' }
+                    }
+                }
+            }
+        ]
+    },
+
+    zone5: {
+        title: "The Innovation (TechBud.AI)",
+        moments: [
+            {
+                id: "z5m1",
+                story: "The flagship: TechBud.AI Agent Assist. An AI-powered tool for airline clients. It cut handling time by 25%.",
+                prompt: "The biggest risk with AI is…",
+                options: {
+                    a: {
+                        text: "Trust",
+                        story: "If agents don't trust it, they won't use it.",
+                        player: "You focus on reliability and adoption.",
+                        reflection: "We focused on trust. Improved adoption by 20%.",
+                        traits: { orientation: 'people', ambiguity: 'manages' }
+                    },
+                    b: {
+                        text: "Accuracy",
+                        story: "Bad AI is worse than no AI.",
+                        player: "You obsess over the data quality.",
+                        reflection: "We tuned the model until the answers were bulletproof.",
+                        traits: { productLens: 'system', decisionStyle: 'deliberate' }
+                    }
+                }
+            },
+            {
+                id: "z5m2",
+                story: "I also managed the UN Subsidiary Database Transformation. Modernizing data for 500+ users. Boosting retrieval speed by 30%.",
+                prompt: "Legacy modernization is…",
+                options: {
+                    a: {
+                        text: "Digital archaeology",
+                        story: "Understanding the old logic is half the battle.",
+                        player: "You respect the history of the codebase.",
+                        reflection: "We had to understand the past to build the future.",
+                        traits: { orientation: 'systems', changeInstinct: 'rootCause' }
+                    },
+                    b: {
+                        text: "Ruthless pruning",
+                        story: "Delete what you don't need.",
+                        player: "You value simplicity and performance.",
+                        reflection: "We achieved 30% speed gains by cutting the fat.",
+                        traits: { orientation: 'outcome', changeInstinct: 'redesign' }
+                    }
+                }
+            },
+            {
+                id: "z5m3",
+                story: "Now, looking forward. I've delivered features, managed backlogs, and led cost-saving initiatives (15% savings).",
+                prompt: "What defines a Senior BA?",
+                options: {
+                    a: {
+                        text: "Writing perfect requirements",
+                        story: "Clarity is king.",
+                        player: "You value specification.",
+                        reflection: "Requirements are key, but alignment is the goal.",
+                        traits: { decisionStyle: 'deliberate', productLens: 'system' }
+                    },
+                    b: {
+                        text: "Connecting dots",
+                        story: "Biz, Tech, Design. You're the glue.",
+                        player: "You thrive in the messy middle.",
+                        reflection: "I live in the intersection of Tech, Business, and User.",
+                        traits: { orientation: 'systems', productLens: 'business' }
+                    }
+                }
+            }
+        ]
+    }
+};
