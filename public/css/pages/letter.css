@@ -1,0 +1,43 @@
+/* FINAL LETTER */
+.letter-card {
+    background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xxl);
+    box-shadow:
+        0 2px 8px rgba(58, 53, 48, 0.08),
+        0 8px 24px rgba(58, 53, 48, 0.12),
+        0 16px 48px rgba(58, 53, 48, 0.16);
+    position: relative;
+    margin: var(--space-xl) 0;
+    transform-style: preserve-3d;
+    transition: all 0.6s var(--ease-gentle);
+}
+
+.letter-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--color-amber-light), var(--color-terracotta-light));
+    border-radius: var(--radius-lg);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.letter-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 4px 16px rgba(58, 53, 48, 0.1),
+        0 12px 32px rgba(58, 53, 48, 0.15),
+        0 24px 64px rgba(58, 53, 48, 0.2);
+}
+
+.letter-signature {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: var(--color-amber-dim);
+    margin-top: var(--space-lg);
+    text-align: right;
+}

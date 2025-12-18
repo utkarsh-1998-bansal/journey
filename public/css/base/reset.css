@@ -1,0 +1,101 @@
+/* CSS RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Pro:wght@400;500;600&display=swap');
+
+body {
+    font-family: var(--font-ui);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-warm-dark);
+    background: var(--color-parchment);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle grain texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-story);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-warm-dark);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-md);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: var(--space-sm);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    font-family: var(--font-story);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: 65ch;
+}
+
+/* UTILITY */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--color-amber);
+    color: var(--color-warm-dark);
+}
+
+.room-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+    position: relative;
+    z-index: 2;
+}
+
+.zone-content {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+}

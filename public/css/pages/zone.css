@@ -1,0 +1,88 @@
+/* ZONE SPECIFIC STYLES */
+
+/* Biology Zone - Brain & Heart */
+.bio-brain {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 180px;
+    height: 180px;
+    opacity: 0.15;
+    transition: all 0.8s var(--ease-gentle);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.bio-brain:hover {
+    opacity: 0.4;
+    transform: scale(1.1);
+}
+
+.bio-brain svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bio-brain:hover .neuron-path {
+    stroke-dashoffset: 0;
+    stroke: var(--color-amber);
+    animation: neuronFire 1.5s ease-in-out infinite;
+}
+
+.bio-heart {
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    width: 140px;
+    height: 140px;
+    opacity: 0.15;
+    transition: all 0.6s var(--ease-gentle);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.bio-heart:hover {
+    opacity: 0.5;
+    animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+/* Business Zone - Cheques & Suitcase */
+.business-cheque {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(235, 229, 217, 0.9) 100%);
+    border: 2px solid var(--color-amber-dim);
+    border-radius: var(--radius-sm);
+    opacity: 0.2;
+    transition: all 0.8s var(--ease-gentle);
+    pointer-events: all;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    animation: floatGentle 6s infinite ease-in-out;
+}
+
+.business-cheque:hover {
+    opacity: 0.6;
+    transform: translateY(-10px) rotate(2deg);
+}
+
+.business-suitcase {
+    position: absolute;
+    bottom: 30%;
+    left: 12%;
+    width: 120px;
+    height: 100px;
+    opacity: 0.15;
+    transition: all 0.6s var(--ease-gentle);
+    pointer-events: all;
+    cursor: pointer;
+    animation: floatGentle 7s infinite ease-in-out 1s;
+}
+
+.business-suitcase:hover {
+    opacity: 0.4;
+    transform: scale(1.15) rotate(-3deg);
+}

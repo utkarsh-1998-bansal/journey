@@ -1,0 +1,44 @@
+/* LANDING PAGE SPECIFIC */
+.spotlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    animation: breathe 6s infinite var(--ease-soft);
+}
+
+.landing-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.landing-copy {
+    text-align: center;
+    margin: var(--space-xl) auto;
+    max-width: 600px;
+}
+
+.expect-bullets {
+    list-style: none;
+    margin: var(--space-lg) 0;
+    text-align: center;
+}
+
+.expect-bullets li {
+    margin: var(--space-sm) 0;
+    color: var(--color-warm-mid);
+    font-family: var(--font-story);
+    font-size: 1.125rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+}

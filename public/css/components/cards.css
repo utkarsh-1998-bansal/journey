@@ -1,0 +1,84 @@
+/* CARDS & SURFACES */
+.warm-card {
+    background: var(--color-sand);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    transition: all var(--duration-base) var(--ease-gentle);
+}
+
+.warm-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+}
+
+/* GLASSMORPHISM CHOICE CARDS */
+.choice-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    cursor: pointer;
+    transition: all 0.4s var(--ease-gentle);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(58, 53, 48, 0.1);
+}
+
+.choice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(193, 122, 122, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-gentle);
+}
+
+.choice-card:hover::before {
+    opacity: 1;
+}
+
+.choice-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.35);
+    border-color: var(--color-amber);
+    box-shadow: 0 12px 48px rgba(212, 165, 116, 0.25);
+}
+
+.choice-card.selected {
+    background: rgba(212, 165, 116, 0.2);
+    border-color: var(--color-amber);
+    transform: translateY(-4px);
+}
+
+.choice-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+/* STORIES & NOTES */
+.zone-story {
+    margin-bottom: var(--space-xl);
+    font-family: var(--font-story);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-warm-mid);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-amber-light);
+}
+
+.paper-note {
+    margin-top: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-left: 1px solid var(--color-amber-light);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4), transparent);
+    font-family: var(--font-story);
+    color: var(--color-warm-dark);
+}
