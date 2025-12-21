@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #0B0F2E;
+    --accent-acid: #B6FF3B;
+    --accent-cyan: #3CF2E6;
+    --font-sans: var(--font-inter);
+    --font-serif: var(--font-instrument);
+  }
+}
+
+/* --- Base Depth & Texture --- */
+body {
+  background: #08090A;
+  /* Near-black depth */
+  @apply antialiased overflow-x-hidden m-0 p-0 text-white/80;
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  line-height: 1.6;
+  /* Calmer breath */
+}
+
+/* Very subtle noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.03;
+  /* Barely there */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glassmorphic Narrative Container - Neutral Slate */
+.narrative-glass {
+  background: rgba(30, 32, 35, 0.4);
+  /* Deep slate tint */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.narrative-glass:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 38, 42, 0.5);
+  border-color: rgba(46, 230, 214, 0.15);
+  /* Accent highlight */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 1px rgba(46, 230, 214, 0.05);
+}
+
+/* Interactive Glass Container - Brighter for Affordance */
+.interactive-glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+.interactive-glass:hover {
+  transform: translateY(-4px);
+  /* Stronger lift */
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(46, 230, 214, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 15px rgba(46, 230, 214, 0.1);
+}
+
+/* Typography Hierarchy */
+.text-identity {
+  font-family: var(--font-instrument);
+  color: #F8F9FA;
+  /* Off-white */
+  letter-spacing: -0.01em;
+}
+
+.text-designation {
+  font-family: var(--font-inter);
+  color: #9BA3AF;
+  /* Muted gray */
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.text-explanation {
+  font-family: var(--font-inter);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.text-accent {
+  color: #2EE6D6;
+  /* Turquoise experimental accent */
+}
+
+/* --- Section Layout --- */
+.section-wrapper {
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  height: 100vh;
+  scrollbar-width: none;
+}
+
+.section-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0 4rem;
+  z-index: 10;
+}
+
+.portrait-frame {
+  width: 180px;
+  /* Restrained */
+  height: 240px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+  filter: grayscale(1) contrast(1.1);
+  transition: all 0.8s ease;
+}
+
+.portrait-frame:hover {
+  filter: grayscale(0.4) contrast(1);
+  border-color: rgba(46, 230, 214, 0.3);
+}

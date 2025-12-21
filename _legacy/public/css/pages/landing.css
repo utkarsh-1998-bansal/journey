@@ -1,0 +1,232 @@
+/* CINEMATIC LANDING STYLES */
+
+.hero-section {
+    padding: var(--space-xxl) 0;
+    margin-bottom: var(--space-xxl);
+    position: relative;
+    animation: fadeUp 1.2s var(--ease-gentle) forwards;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    /* Playfair is bold enough */
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+    color: var(--color-charcoal);
+}
+
+.hero-subtitle {
+    font-family: var(--font-ui);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    color: var(--color-sage);
+    margin-bottom: var(--space-lg);
+    line-height: 1.5;
+}
+
+.hero-context {
+    font-family: var(--font-story);
+    /* Serif for context */
+    font-style: italic;
+    color: var(--color-warm-mid);
+    font-size: 1.125rem;
+    margin-top: var(--space-lg);
+}
+
+.hero-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--color-amber);
+    margin: var(--space-lg) auto;
+    opacity: 0.5;
+}
+
+.subtle-link {
+    color: var(--color-warm-mid);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    margin-top: var(--space-sm);
+    display: inline-block;
+}
+
+.subtle-link:hover {
+    color: var(--color-amber);
+    border-color: var(--color-amber);
+}
+
+/* SECTION 2: CONTEXT */
+.context-section {
+    max-width: 680px;
+    margin: 0 auto var(--space-xxl);
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 1.2s var(--ease-gentle) 0.3s forwards;
+}
+
+.section-label {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-amber);
+    margin-bottom: var(--space-lg);
+    font-weight: 600;
+}
+
+.editorial-text p {
+    font-family: var(--font-story);
+    font-size: 1.35rem;
+    /* Large, readable */
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+}
+
+.editorial-text .highlight {
+    color: var(--color-amber);
+    font-style: italic;
+}
+
+.mini-divider {
+    width: 20px;
+    height: 2px;
+    background: var(--color-sage);
+    margin: var(--space-lg) auto;
+    opacity: 0.3;
+}
+
+/* SECTION 3: PATHS GRID */
+.paths-section {
+    margin-bottom: var(--space-xxl);
+    opacity: 0;
+    animation: fadeUp 1.2s var(--ease-gentle) 0.6s forwards;
+}
+
+.paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    align-items: start;
+}
+
+.path-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: var(--space-lg);
+    border-radius: var(--radius-sm);
+    transition: all 0.4s var(--ease-gentle);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.path-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-amber-light);
+}
+
+.path-card.featured {
+    background: #fff;
+    border: 1px solid var(--color-amber);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+.path-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.path-icon {
+    font-size: 1.5rem;
+}
+
+.path-card h4 {
+    font-family: var(--font-story);
+    font-size: 1.25rem;
+    color: var(--color-charcoal);
+    margin: 0;
+}
+
+.path-card p {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    color: var(--color-warm-mid);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.path-meta {
+    font-size: 0.85rem;
+    color: var(--color-sage);
+    margin-top: var(--space-sm);
+    font-weight: 500;
+}
+
+.path-link {
+    color: var(--color-amber);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: var(--space-md);
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.path-link:hover {
+    transform: translateX(4px);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: var(--space-md);
+}
+
+/* SECTION 4: NOTE */
+.personal-note {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: var(--space-xl);
+    opacity: 0;
+    animation: fadeUp 1.2s var(--ease-gentle) 0.9s forwards;
+}
+
+.personal-note p {
+    font-family: var(--font-story);
+    font-size: 1rem;
+    color: var(--color-warm-mid);
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .paths-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

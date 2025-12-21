@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Bansal</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/css/base/variables.css">
+    <link rel="stylesheet" href="/css/base/reset.css">
+    <link rel="stylesheet" href="/css/base/animations.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/components/cards.css">
+    <link rel="stylesheet" href="/css/pages/landing.css">
+</head>
+
+<body>
+    <!-- Cinematic Dust -->
+    <div class="particles" id="particles"></div>
+
+    <div class="zone active" id="landing">
+        <div class="room-container">
+            <div class="zone-content">
+
+                <!-- SECTION 1: HERO -->
+                <header class="hero-section text-center">
+                    <h1 class="hero-title breathe">Welcome to the world of Utkarsh.</h1>
+                    <h2 class="hero-subtitle">This isn’t a portfolio.<br>It’s a guided walk through how a mind is
+                        shaped.</h2>
+
+                    <div class="hero-divider"></div>
+
+                    <p class="hero-context">
+                        From life sciences to enterprise sales to product and AI —<br>
+                        this space captures the decisions behind the outcomes.
+                    </p>
+
+                    <div class="cta-group" style="margin-top: var(--space-xl);">
+                        <button class="warm-btn warm-btn-primary"
+                            onclick="document.getElementById('bg-context').scrollIntoView({behavior: 'smooth'})">
+                            <span>Enter the Room</span>
+                        </button>
+                        <a href="#bg-context" class="subtle-link">Take a quick look</a>
+                    </div>
+                </header>
+
+                <!-- SECTION 2: CONTEXT -->
+                <section id="bg-context" class="context-section">
+                    <h3 class="section-label">WHY THIS EXISTS</h3>
+
+                    <div class="editorial-text">
+                        <p>You’ve probably seen the resume.</p>
+                        <p>Three-plus years of experience. Adoption metrics. Efficiency gains.</p>
+                        <p class="highlight">But numbers are just the visible layer.</p>
+
+                        <div class="mini-divider"></div>
+
+                        <p>
+                            This space is about the decisions underneath — how trade-offs were made,
+                            how people were understood, and how systems were navigated when nothing was obvious.
+                        </p>
+                        <p>
+                            If you’re curious about how someone thinks — not just what they’ve done —
+                            you’re in the right place.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: THE THREE PATHS (TABS) -->
+                <section class="paths-section">
+                    <div class="paths-grid">
+                        <!-- Path 1 -->
+                        <div class="path-card">
+                            <div class="path-header">
+                                <span class="path-icon">👁️</span>
+                                <h4>A Quick Look</h4>
+                            </div>
+                            <p>A short, guided overview. Key moments. Clear transitions. Enough context to understand
+                                the journey — without going deep.</p>
+                            <a href="#" class="path-link">View the journey →</a>
+                        </div>
+
+                        <!-- Path 2 (Primary) -->
+                        <div class="path-card featured">
+                            <div class="path-header">
+                                <span class="path-icon">🧭</span>
+                                <h4>The Guided Exploration</h4>
+                            </div>
+                            <p>The heart of the experience. A story-driven treasure hunt through decisions, instincts,
+                                and trade-offs. No right or wrong answers.</p>
+                            <p class="path-meta">Takes 3–5 minutes.</p>
+                            <button class="warm-btn warm-btn-primary full-width" id="enterBtn">
+                                <span>Enter the hunt</span>
+                            </button>
+                        </div>
+
+                        <!-- Path 3 -->
+                        <div class="path-card">
+                            <div class="path-header">
+                                <span class="path-icon">📍</span>
+                                <h4>Today</h4>
+                            </div>
+                            <p>Where the story stands today. Current work. Products being built. Problems worth solving
+                                next.</p>
+                            <a href="/final" class="path-link">Jump to today →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: PERSONAL NOTE -->
+                <footer class="personal-note">
+                    <p>
+                        I built this because I don’t believe good work comes from rigid paths.
+                        It comes from paying attention — to people, to systems, to what breaks quietly before it fails
+                        loudly.
+                        If that way of thinking resonates, feel free to explore.
+                    </p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="/js/pages/landing.js"></script>
+</body>
+
+</html>

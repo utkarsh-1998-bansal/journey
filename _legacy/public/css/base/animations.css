@@ -1,4 +1,4 @@
-/* FLOATING PARTICLES */
+/* FLOATING DUST (Cinematic) */
 .particles {
     position: fixed;
     top: 0;
@@ -12,25 +12,32 @@
 
 .particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 2px;
+    height: 2px;
     background: var(--color-amber);
     border-radius: 50%;
-    opacity: 0.2;
-    animation: float var(--duration-slow) infinite ease-in-out;
+    opacity: 0.15;
+    /* Barely visible */
+    animation: dustFloat 20s infinite linear;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
+@keyframes dustFloat {
+    0% {
         transform: translateY(0) translateX(0);
-        opacity: 0.1;
+        opacity: 0;
     }
 
-    50% {
+    10% {
+        opacity: 0.15;
+    }
+
+    90% {
+        opacity: 0.15;
+    }
+
+    100% {
         transform: translateY(-100px) translateX(20px);
-        opacity: 0.3;
+        opacity: 0;
     }
 }
 

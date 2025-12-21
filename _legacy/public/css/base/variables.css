@@ -1,23 +1,23 @@
 :root {
-    /* Warm Color Palette */
-    --color-parchment: #f5f1e8;
-    --color-sand: #ebe5d9;
-    --color-amber: #d4a574;
-    --color-terracotta: #c17a7a;
-    --color-teal: #5a8a8a;
-    --color-warm-dark: #3a3530;
+    /* Cinematic Color Palette */
+    --color-parchment: #F7F3ED;
+    /* Warm Parchment */
+    --color-sand: #EBE5D9;
+    /* Slightly darker parchment */
+    --color-charcoal: #2E2E2E;
+    /* Primary Text - Soft Black */
+    --color-amber: #C47A4A;
+    /* Muted Terracotta Accent */
+    --color-sage: #5E6E64;
+    /* Deep Sage Secondary */
     --color-warm-mid: #6b6862;
-    --color-warm-light: #a8a5a0;
-
-    /* Accent variations */
-    --color-amber-light: #e0b685;
-    --color-amber-dim: #b8936a;
-    --color-teal-light: #7aa8a8;
-    --color-terracotta-light: #d49494;
+    --color-white-wash: rgba(255, 255, 255, 0.4);
 
     /* Typography */
-    --font-story: 'Crimson Pro', Georgia, serif;
+    --font-story: 'Playfair Display', Georgia, serif;
+    /* Editorial Headline */
     --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Clean Body */
 
     /* Spacing */
     --space-xs: 0.5rem;
