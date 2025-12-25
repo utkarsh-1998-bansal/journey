@@ -53,8 +53,8 @@ export default function CardCarousel() {
                         // Only render 3 cards (center, prev, next)
                         if (distance > 1) return null;
 
-                        let status: 'active' | 'preview' | 'hidden' = 'hidden';
-                        if (index === activeIndex) status = 'active';
+                        let status: 'focused' | 'preview' | 'hidden' = 'hidden';
+                        if (index === activeIndex) status = 'focused';
                         else if (distance === 1) status = 'preview';
 
                         // Vertical Offset for stack effect
@@ -65,7 +65,7 @@ export default function CardCarousel() {
                                 key={card.id}
                                 animate={{
                                     y: yOffset,
-                                    zIndex: status === 'active' ? 20 : 10
+                                    zIndex: status === 'focused' ? 20 : 10
                                 }}
                                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                                 className="absolute inset-0 flex items-center justify-center pointer-events-none"
